@@ -1,0 +1,76 @@
+﻿<h1>Buy ticket</h1>
+<a class="btn btn-secondary" type="button" asp-action="Index">All tickets</a><br /><br />
+
+<select class="form-select" aria-label="Default select example" id="startStationSelect">
+    <option selected disabled hidden>Start station</option>
+    @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+</select>
+<br>
+
+<select class="form-select" aria-label="Default select example" id="endStationSelect">
+    <option selected disabled hidden>End Station</option>
+    @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+</select>
+<br>
+
+<select class="form-select" aria-label="Default select example" id="seatType">
+    <option selected disabled hidden>Seat Type</option>
+    <option value="1">1st class</option>
+    <option value="2">2nd class</option>
+</select>
+<br>
+
+<div class="form-group">
+    <label for="departureDateTime">Departure Date and Time</label>
+    <input type="datetime-local" class="form-control" id="departureDateTime" />
+</div>
+<br>
+
+
+<button type="button" class="btn btn-primary" id="findRouteButton">Search</button>
+<br>
+<br>
+
+<div id="searchResultPartial">
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="text/javascript">
+    var ticketViewModel;
+    $('#findRouteButton').click(e => {
+        let data = {
+            startStationId: $('#startStationSelect').val(),
+            endStationId: $('#endStationSelect').val(),
+            departureTime: $('#departureDateTime').val(),
+            seatType: $('#seatType').val()
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+
+        $.post(domain + "Ticket/Search", data, function(returnValue){
+            ticketViewModel = returnValue.ticketViewModel;
+            console.log(returnValue);
+            if (!returnValue.hasOwnProperty('errors')) {
+
+                var url = '@Url.Action("SearchResult", "Ticket")';
+                $.ajax({
+                    complete: function () {
+                        $('#searchResultPartial').load(url, {ticket: returnValue.searchViewModel}); 
+                    }
+                });
+            } else {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { 
+            })
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

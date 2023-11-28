@@ -1,0 +1,61 @@
+﻿<h1>Create Journey</h1>
+<br />
+
+<form id="createJourneyForm">
+    <div class="form-group">
+        <select name="startStation" id="startStationIdInput" class="form-select">
+            <option selected disabled hidden>Starting Station</option>
+            @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <select name="endStation" id="endStationIdInput" class="form-select">
+            <option selected disabled hidden>Ending Station</option>
+            @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <select name="trainId" id="trainIdInput" class="form-select">
+            <option selected disabled hidden>Train</option>
+            @await Component.InvokeAsync("TrainSelect", new { selected = 0 } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <label>Departure time</label>
+        <input type="time" id="departureTimeInput" name="departureTime" class="form-control" placeholder="Departure Time">
+    </div><br />
+    <div class="form-group">
+        <label>Arrival time</label>
+        <input type="time" id="arrivalTimeInput" name="arrivalTime" class="form-control" placeholder="Arrival Time">
+    </div><br />
+    <button type="submit" value="CreateJourney" class="btn btn-primary">Create Journey</button>
+</form>
+
+<script type="text/javascript">
+    $('#createJourneyForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            startStationId: $('#startStationIdInput').val(),
+            endStationId: $('#endStationIdInput').val(),
+            trainId: $('#trainIdInput').val(),
+            departureTime: $('#departureTimeInput').val(),
+            arrivalTime: $('#arrivalTimeInput').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+
+        $.post(domain + "Journey/Create", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Journey/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

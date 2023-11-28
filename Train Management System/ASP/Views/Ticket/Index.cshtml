@@ -1,0 +1,72 @@
+﻿@using ASP.Models
+@using System.Security.Claims
+@model List<TicketViewModel>
+@{var role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value;}
+
+
+@{
+    ViewData["Title"] = "Index";
+    int i = 0;
+}
+
+<h1>Tickets</h1>
+@if (Model != null){
+    @foreach (TicketViewModel ticketViewModel in Model)
+    {
+        if(ticketViewModel.JourneySearchViewModelList.Count != 0)
+        {
+            <hidden hidden>@(i++)</hidden>
+            <div class="card">
+                <div class="card-header">
+                    @ticketViewModel.JourneySearchViewModelList[0].StartStationName --> @ticketViewModel.JourneySearchViewModelList[ticketViewModel.JourneySearchViewModelList.Count -1].EndStationName
+                </div>
+                <div class="card-body">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@string.Format("dropdown{0}",i)" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    <p>
+                                        Price: <b>@ticketViewModel.PurchasePrice</b> 
+                                        Code:  <b>@ticketViewModel.Code</b>
+                                        @if (role == "Administrator") { <text>User:</text> <b>@await Component.InvokeAsync("UserName", new { id = @ticketViewModel.UserId } )</b> }
+                                    </p>  
+                                </button>
+                            </h2>
+                            <div id="@string.Format("dropdown{0}",i)" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Price</th>
+                                                <th>Start station</th>
+                                                <th>Start time</th>
+                                                <th>End station</th>
+                                                <th>End time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (JourneySearchViewModel journeySearchViewModel in ticketViewModel.JourneySearchViewModelList){
+                                                <tr>
+                                                    <td>@journeySearchViewModel.JourneyPrice</td>
+                                                    <td>@journeySearchViewModel.StartStationName</td>
+                                                    <td>@journeySearchViewModel.StartTime</td>
+                                                    <td>@journeySearchViewModel.EndStationName</td>
+                                                    <td>@journeySearchViewModel.EndTime</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div><br />
+        }
+    }
+} else
+{
+    <br />
+    <h4>No tickets found</h4>
+}
+

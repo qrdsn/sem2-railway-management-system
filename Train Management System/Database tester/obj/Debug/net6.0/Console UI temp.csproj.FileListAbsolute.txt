@@ -1,0 +1,26 @@
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI temp.exe
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI temp.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI temp.runtimeconfig.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI temp.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI temp.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Data.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Logic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Logic.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Data.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.csproj.CopyComplete
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\refint\Console UI temp.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI temp.genruntimeconfig.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\ref\Console UI temp.dll

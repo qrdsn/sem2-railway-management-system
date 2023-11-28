@@ -1,0 +1,34 @@
+﻿@model int
+
+<h1>Delete Train</h1>
+<p>Are you sure you want to <b>delete</b> this train?</p>
+
+<form id="deleteTrainForm">
+    <button type="submit" value="DeleteTrain" class="btn btn-danger">Delete Train</button>
+</form>
+
+<script type="text/javascript">
+    $('#deleteTrainForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            id: (@Model),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+
+       
+        $.post(domain + "Train/ConfirmDelete", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Train/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

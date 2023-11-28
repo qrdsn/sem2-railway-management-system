@@ -1,0 +1,112 @@
+﻿@model List<JourneyViewModel>
+
+@{
+    ViewData["Title"] = "Journey";
+}
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-labelledby="AddFile" aria-hidden="true" style="text-align: center">
+    <div class="modal-dialog" style="width:30vw;">
+        <div id="overlayContent" class="modal-content d-flex bd-highlight border" style="border:none; padding:15px; border-radius:10px; width:100%; background-color:white; text-align:left">
+        </div>
+    </div>
+</div>
+
+<h1>Journey</h1>
+
+<a href="#" class="btn btn-primary" id="createJourney" data-bs-toggle="modal" data-bs-target="#overlay">
+    Create Journey
+</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Railway</th>
+            <th>Train</th>
+            <th>State</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Adjusted Departure Time</th>
+            <th>Adjusted Arrival Time</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null)
+        {
+            @foreach (JourneyViewModel journey in Model) {
+                <tr>
+                    @try
+                    {
+                        <td>@await Component.InvokeAsync("RailwayNameIndex", new { railwayId = journey.RailwayId, startStationId = journey.StartStationId } )</td>
+                    }
+                    catch
+                    {
+                        <td></td>
+                    }
+                    @try
+                    {
+                        <td>@await Component.InvokeAsync("TrainNameIndex", new { trainId = journey.TrainId } )</td>
+                    }
+                    catch
+                    {
+                        <td></td>
+                    }
+                        
+                @if(journey.State == true)
+                {
+                    <td><i class="bi bi-check-square"></i></td>
+                } else {
+                    <td><i class="bi bi-x-square-fill"></i></td>
+                }
+                <td>@journey.DepartureTime</td>
+                <td>@journey.ArrivalTime</td>
+                @if(journey.AdjustedArrivalTime != null || journey.AdjustedDepartureTime != null) {
+                    <td>@journey.AdjustedDepartureTime</td>
+                    <td>@journey.AdjustedArrivalTime</td>
+                }else {
+                    <td></td>
+                    <td></td>
+                }
+                <td>
+                    <a href="#" onclick="editJourney(@(journey.JourneyId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="deleteJourney(@(journey.JourneyId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                </td>
+            </tr>            
+        }
+}
+    </tbody>
+</table>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#createJourney').click( e =>{
+        e.preventDefault();
+
+        var url = '@Url.Action("Create", "Journey")';
+        $('#overlayContent').load(url);
+    })
+
+    function deleteJourney(id){
+        var url = '@Html.Raw(Url.Action("Delete", "Journey", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+
+    function editJourney(id){
+        var url = '@Html.Raw(Url.Action("Edit", "Journey", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+</script>

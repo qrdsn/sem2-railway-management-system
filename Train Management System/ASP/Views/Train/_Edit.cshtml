@@ -1,0 +1,55 @@
+﻿@using Interface.Train
+@model TrainViewModel
+
+<h1>Edit</h1>
+<br />
+
+<form id="editTrainForm">
+    <div class="form-group">
+        <label>Train Type</label>
+        <select id="typeInput" class="form-select" name="type">
+            @foreach (TrainTypes trainType in Enum.GetValues(typeof(TrainTypes)))
+            {
+                if (Model.Type == trainType )
+                {
+                    <option selected value="@Convert.ToInt32(trainType)">@trainType</option>
+                } else
+                {
+                    <option value="@Convert.ToInt32(trainType)">@trainType</option>
+                }
+            }
+        </select>
+    </div><br />
+    <div class="form-group">
+        <label>Max speed Km/h</label>
+        <input name="maxSpeed" id="maxSpeedInput" class="form-control" type="number" value="@Model.MaxSpeed">
+    </div><br />
+    <button type="submit" value="editTrain" class="btn btn-primary">Save Train</button>
+</form>
+
+<script type="text/javascript">
+    $('#editTrainForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            type: $('#typeInput').val(),
+            maxSpeed: $('#maxSpeedInput').val(),
+            trainId: (@Model.TrainId),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Train/Edit", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Train/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

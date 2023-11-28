@@ -1,0 +1,37 @@
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI.exe
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI.runtimeconfig.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Console UI.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Data.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Logic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Data.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Logic.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Interface.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.csproj.CopyComplete
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\refint\Console UI.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\Console UI.genruntimeconfig.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\obj\Debug\net6.0\ref\Console UI.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\MailKit.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

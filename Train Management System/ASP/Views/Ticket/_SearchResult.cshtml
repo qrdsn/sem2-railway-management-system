@@ -1,0 +1,46 @@
+﻿@model TicketViewModel
+
+
+<a>@Model.TimeMinutes</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Price</th>
+            <th>Start station</th>
+            <th>Start time</th>
+            <th>End station</th>
+            <th>End time</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model.JourneySearchViewModelList) {
+            <tr>
+                <td>@item.JourneyPrice</td>
+                <td>@item.StartStationName</td>
+                <td>@item.StartTime</td>
+                <td>@item.EndStationName</td>
+                <td>@item.EndTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    <button class="btn btn-primary" id="buyTicket">Buy ticket</button>
+
+<script type="text/javascript">
+    $('#buyTicket').click(e => {
+        console.log(ticketViewModel);
+        let data = {
+            ticketViewModel: ticketViewModel,
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+        
+        $.post(domain + "Ticket/Buy", data)
+            .done(() => { window.location.href = domain + "Home/Index"} )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+        })
+    })
+</script>

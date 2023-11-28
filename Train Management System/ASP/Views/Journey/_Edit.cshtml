@@ -1,0 +1,92 @@
+﻿@model JourneyViewModel
+
+<h1>Edit</h1>
+<br />
+
+<form id="editJourneyForm">
+    <div class="form-group">
+        <label>Railway</label>
+        <select name="railway" id="railwayIdInput" class="form-select">
+            @await Component.InvokeAsync("RailwaySelect", new { selected = Model.RailwayId } )
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Train</label>
+        <select name="trainId" id="trainIdInput" class="form-select">
+            <option selected disabled hidden>Train</option>
+            @await Component.InvokeAsync("TrainSelect", new { selected = Model.TrainId } )
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Starting station</label>
+        <select name="startStation" id="startStationIdInput" class="form-select">
+            <option selected disabled hidden>Starting Station</option>
+            @await Component.InvokeAsync("StationSelect", new { selected = Model.StartStationId } )
+        </select>
+    </div>
+    <div class="form-group">
+        <label>State</label>
+        <select class="form-select" name="state" id="stateInput">
+            @if (Model.State == true) {
+                <option selected value="True">Enabled</option>
+                <option value="False">Disabled</option>
+            } 
+            else {
+                <option value="True">Enabled</option>
+                <option selected value="False">Disabled</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Departure time</label>
+        <input id="departureTimeInput" name="departureTime" class="form-control" type="time" value="@Model.DepartureTime">
+    </div>
+    <div class="form-group">
+        <label>Arrival time</label>
+        <input id="arrivalTimeInput" name="arrivalTime" class="form-control" type="time" value="@Model.ArrivalTime">
+    </div>
+    <div class="form-group">
+        <label>Adjusted departure time</label>
+        <input id="adjustedDepartureTimeInput" name="adjustedDepartureTime" class="form-control" value="@if (Model.AdjustedDepartureTime != null) @Model.AdjustedDepartureTime" type="time">
+    </div>
+    <div class="form-group">
+        <label>Adjusted arrival time</label>
+        <input id="adjustedDepartureTimeInput" name="adjustedArrivalTime" class="form-control" value="@if (Model.AdjustedArrivalTime != null) @Model.AdjustedArrivalTime" type="time">
+    </div>
+    <br/>
+    <button type="submit" value="editJourney" class="btn btn-primary">Save Journey</button>
+</form>
+
+<script type="text/javascript">
+    $('#editJourneyForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            startStationId: $('#startStationIdInput').val(),
+            endStationId: $('#endStationIdInput').val(),
+            trainId: $('#trainIdInput').val(),
+            departureTime: $('#departureTimeInput').val(),
+            arrivalTime: $('#arrivalTimeInput').val(),
+            journeyId: (@Model.JourneyId),
+            state: $('#stateInput').val(),
+            railwayId: $('#railwayIdInput').val(),
+            adjustedDepartureTime: $('#adjustedDepartureTimeInput').val(),
+            adjustedArrivalTime: $('#adjustedArrivalTimeInput').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Journey/Edit", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Journey/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

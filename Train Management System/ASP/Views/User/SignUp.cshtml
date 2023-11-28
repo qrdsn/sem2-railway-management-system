@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Sign Up";
+}
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASP.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/icons/bootstrap-icons.css" />
+</head>
+<body>
+    <div class="p-3">
+        <div class="d-flex align-items-center justify-content-center" style="height:400px">
+            <div class="bd-highlight border" style="padding:15px; border-radius:10px; width:300px;">
+                <form id="signUpForm" class="form-group">
+                    <input class="form-control" type="email" id="emailInput" name="email" placeholder="Email"><br>
+                    <input class="form-control btn btn-primary" type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; left: 0; bottom: 0; width: 100%; text-align: left;">
+        <a href="/../keys.txt">Inbox :'D</a>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        $('#signUpForm').submit(e => {
+            e.preventDefault();
+
+            let data = {
+                email: $('#emailInput').val(),
+            }
+
+            let domain = window.location.protocol + "//" + window.location.host + "/";
+
+
+            $.post(domain + "User/SignUp", data, function(returnValue){
+                console.log(returnValue);
+                if (returnValue.hasOwnProperty('errors')) {
+                    var message = "";
+                    returnValue.errors.forEach(item => message = message + "\n" + item);
+                    alert(message);
+                }
+            }, "json")
+                .done(() => { window.location.href = domain + "User/Login" } )
+                .fail(xhr => { 
+                    alert(xhr.responseMessage) 
+                })
+        })
+    </script>
+</body>

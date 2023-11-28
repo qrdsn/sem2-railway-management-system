@@ -1,0 +1,76 @@
+﻿@using Interface.User
+
+<h1>Create user</h1>
+<br />
+
+<form id="createUserForm">
+    <div class="form-group">
+        <input name="firstName" id="firstNameInput" class="form-control" type="text" placeholder="First name">
+    </div><br />
+    <div class="form-group">
+        <input name="lastName" id="lastNameInput" class="form-control" type="text" placeholder="Last Name">
+    </div><br />
+    <div class="form-group">
+        <input name="email" id="emailInput" class="form-control" type="email" placeholder="Email">
+    </div><br />
+    <div class="form-group">
+        <select class="form-select" name="role" id="roleInput">
+            <option selected disabled hidden>Role</option>
+            @foreach (UserRoles userRoles in Enum.GetValues(typeof(UserRoles)))
+            {
+                <option value="@Convert.ToInt32(userRoles)">@userRoles</option>
+            }
+        </select><br />
+    </div>
+    <div class="form-group" id="employeePositionSelect">
+        <select class="form-select" name="employeePosition" id="employeePositionInput">
+            <option selected disabled hidden>Position</option>
+            @foreach (EmployeePositions employeePosition in Enum.GetValues(typeof(EmployeePositions)))
+            {
+                <option value="@Convert.ToInt32(employeePosition)">@employeePosition</option>
+            }
+        </select>
+    </div><br />
+    <button type="submit" value="createUser" class="btn btn-primary">Create User</button>
+</form>
+
+<script type="text/javascript">
+    $('#createUserForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            firstName: $('#firstNameInput').val(),
+            lastName: $('#lastNameInput').val(),
+            email: $('#emailInput').val(),
+            role: $('#roleInput').val(),
+            employeePosition: $('#employeePositionInput').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "User/Create", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "User/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+
+    $('#roleInput').on('change', function() {
+        if($(this).val() === "1") {
+            $('#employeePositionSelect').show();
+        } else {
+            $('#employeePositionSelect').hide();
+        }
+     })
+
+    $(document).ready(function(){
+        $('#employeePositionSelect').hide();
+    });
+</script>

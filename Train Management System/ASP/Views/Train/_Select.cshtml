@@ -1,0 +1,24 @@
+﻿@model Tuple<List<TrainViewModel>, int>
+
+@if (Model != null)
+{
+    if (Model.Item2 == 0)
+    {
+        foreach(TrainViewModel trainViewModel in Model.Item1)
+        {
+            <option value="@trainViewModel.TrainId">@trainViewModel.Type | @trainViewModel.MaxSpeed | (@trainViewModel.TrainId)</option>
+        }        
+    } 
+    else
+    {
+        foreach(TrainViewModel trainViewModel in Model.Item1)
+        {
+            if (trainViewModel.TrainId == Model.Item2)
+            {
+                <option selected value="@trainViewModel.TrainId">@trainViewModel.Type | @trainViewModel.MaxSpeed | (@trainViewModel.TrainId)</option>
+            } else {
+                <option value="@trainViewModel.TrainId">@trainViewModel.Type | @trainViewModel.MaxSpeed | (@trainViewModel.TrainId)</option>
+            }
+        }  
+    }
+}

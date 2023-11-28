@@ -1,0 +1,15 @@
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\bin\Debug\net6.0\Logic.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\bin\Debug\net6.0\Logic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\bin\Debug\net6.0\Logic.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\bin\Debug\net6.0\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\bin\Debug\net6.0\Interface.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.csproj.CopyComplete
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\refint\Logic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\Logic.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Logic\obj\Debug\net6.0\ref\Logic.dll

@@ -1,0 +1,9 @@
+﻿@model List<JourneyViewModel>
+
+@if (Model != null)
+{
+    foreach(JourneyViewModel journey in Model)
+    {
+        <option value="@journey.JourneyId">@await Component.InvokeAsync("RailwayNameIndex", new { railwayId = journey.RailwayId, startStationId = journey.StartStationId } ) | @journey.DepartureTime | @journey.ArrivalTime</option>
+    }        
+} 

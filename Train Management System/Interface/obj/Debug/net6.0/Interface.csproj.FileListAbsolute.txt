@@ -1,0 +1,12 @@
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\bin\Debug\net6.0\Interface.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\bin\Debug\net6.0\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\bin\Debug\net6.0\Interface.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\refint\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\Interface.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\Interface\obj\Debug\net6.0\ref\Interface.dll

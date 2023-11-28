@@ -1,0 +1,48 @@
+﻿<h1>Create Railway</h1>
+<br />
+
+<form id="createRailwayForm">
+    <div class="form-group">
+        <select name="startStation" id="startStationIdInput" class="form-select">
+            <option selected disabled hidden>Start station</option>
+            @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <select name="endStation" id="endStationIdInput" class="form-select">
+            <option selected disabled hidden>End station</option>
+            @await Component.InvokeAsync("StationSelect", new { selected = 0 } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <input name="length" id="lengthInput" class="form-control" type="number" placeholder="Length (km)">
+    </div><br />
+    <button type="submit" value="createRailway" class="btn btn-primary">Create Railway</button>
+</form>
+
+<script type="text/javascript">
+    $('#createRailwayForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            startStationId: $('#startStationIdInput').val(),
+            endStationId: $('#endStationIdInput').val(),
+            length: $('#lengthInput').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Railway/Create", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Railway/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

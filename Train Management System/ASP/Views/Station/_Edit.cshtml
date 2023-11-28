@@ -1,0 +1,43 @@
+﻿@model StationViewModel
+
+<h1>Edit</h1>
+<br />
+
+<form id="editStationForm">
+    <div class="form-group">
+        <label>Name</label>
+        <input name="name" id="nameInput" class="form-control" type="text" value="@Model.Name">
+    </div><br />
+    <div class="form-group">
+        <label>End station</label>
+        <input name="location" id="locationInput" class="form-control" type="text" value="@Model.Location">
+    </div><br />
+    <button type="submit" value="editStation" class="btn btn-primary">Save Station</button>
+</form>
+
+<script type="text/javascript">
+    $('#editStationForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            name: $('#nameInput').val(),
+            location: $('#locationInput').val(),
+            stationId: (@Model.StationId),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Station/Edit", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Station/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

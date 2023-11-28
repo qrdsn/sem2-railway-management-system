@@ -1,0 +1,24 @@
+﻿@model Tuple<List<RailwayViewModel>, int>
+
+@if (Model != null)
+{
+    if (Model.Item2 == 0)
+    {
+        foreach(RailwayViewModel railwayViewModel in Model.Item1)
+        {
+            <option value="@railwayViewModel.RailwayId">@await Component.InvokeAsync("RailwayName", new { railway = railwayViewModel } ) | (@railwayViewModel.RailwayId)</option>
+        }        
+    } 
+    else
+    {
+        foreach(RailwayViewModel railwayViewModel in Model.Item1)
+        {
+            if (railwayViewModel.RailwayId == Model.Item2)
+            {
+                <option selected value="@railwayViewModel.RailwayId">@await Component.InvokeAsync("RailwayName", new { railway = railwayViewModel } ) | (@railwayViewModel.RailwayId)</option>
+            } else {
+                <option value="@railwayViewModel.RailwayId">@await Component.InvokeAsync("RailwayName", new { railway = railwayViewModel } ) | (@railwayViewModel.RailwayId)</option>
+            }
+        }  
+    }
+}

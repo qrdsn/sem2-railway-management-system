@@ -1,0 +1,66 @@
+﻿@model RailwayViewModel
+
+<h1>Edit</h1>
+<br />
+
+<form id="editRailwayForm">
+    <div class="form-group">
+        <label>Start station</label>
+        <select name="startStation" id="startStationIdInput" class="form-select">
+            @await Component.InvokeAsync("StationSelect", new { selected = Model.StartStationId } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <label>End station</label>
+        <select name="endStation" id="endStationIdInput" class="form-select">
+            @await Component.InvokeAsync("StationSelect", new { selected = Model.EndStationId } )
+        </select>
+    </div><br />
+    <div class="form-group">
+        <label>Length (km)</label>
+        <input name="length" id="lengthInput" class="form-control" type="number" value="@Model.Length">
+    </div><br />
+    <div class="form-group">
+        <label>State</label>
+        <select class="form-select" name="state" id="stateInput">
+            @if (Model.State == true) {
+                <option selected value="True">Enabled</option>
+                <option value="False">Disabled</option>
+            } 
+            else {
+                <option value="True">Enabled</option>
+                <option selected value="False">Disabled</option>
+            }
+        </select>
+    </div><br/>
+    <button type="submit" value="editRailway" class="btn btn-primary">Save Railway</button>
+</form>
+
+<script type="text/javascript">
+    $('#editRailwayForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            startStationId: $('#startStationIdInput').val(),
+            endStationId: $('#endStationIdInput').val(),
+            length: $('#lengthInput').val(),
+            state: $('#stateInput').val(),
+            railwayId: (@Model.RailwayId),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Railway/Edit", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Railway/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

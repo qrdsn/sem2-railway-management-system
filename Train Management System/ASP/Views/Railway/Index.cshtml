@@ -1,0 +1,86 @@
+﻿@model List<RailwayViewModel>
+
+@{
+    ViewData["Title"] = "Railways";
+}
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-labelledby="AddFile" aria-hidden="true" style="text-align: center">
+    <div class="modal-dialog" style="width:30vw;">
+        <div id="overlayContent" class="modal-content d-flex bd-highlight border" style="border:none; padding:15px; border-radius:10px; width:100%; background-color:white; text-align:left">
+        </div>
+    </div>
+</div>
+
+<h1>Railways</h1>
+
+<a href="#" class="btn btn-primary" id="createRailway" data-bs-toggle="modal" data-bs-target="#overlay">
+    Create railway
+</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Start Station</th>
+            <th>End Station</th>
+            <th>Length</th>
+            <th>State</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null)
+        {
+            @foreach (RailwayViewModel railway in Model) {
+            <tr>
+                <td>@railway.StartStationName</td>
+                <td>@railway.EndStationName</td>
+                <td>@railway.Length</td>
+                @if(railway.State == true)
+                {
+                    <td><i class="bi bi-check-square"></i></td>
+                } else {
+                    <td><i class="bi bi-x-square-fill"></i></td>
+                }
+                <td>
+                    <a href="#" onclick="editRailway(@(railway.RailwayId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="deleteRailway(@(railway.RailwayId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                </td>
+            </tr>            
+        }
+}
+    </tbody>
+</table>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#createRailway').click( e =>{
+        e.preventDefault();
+
+        var url = '@Url.Action("Create", "Railway")';
+        $('#overlayContent').load(url);
+    })
+
+    function deleteRailway(id){
+        var url = '@Html.Raw(Url.Action("Delete", "Railway", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+
+    function editRailway(id){
+        var url = '@Html.Raw(Url.Action("Edit", "Railway", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+</script>

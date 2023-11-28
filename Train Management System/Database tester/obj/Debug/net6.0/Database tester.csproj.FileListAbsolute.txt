@@ -1,0 +1,26 @@
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\Database tester.exe
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\Database tester.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\Database tester.runtimeconfig.json
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\Database tester.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\Database tester.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\BusinessLogic.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\BusinessLogic.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.csproj.CopyComplete
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\refint\Database tester.dll
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\Database tester.genruntimeconfig.cache
+C:\Users\Quinn\School\Semester 2\Individual project\c# programs\Train Management System\Database tester\obj\Debug\net6.0\ref\Database tester.dll

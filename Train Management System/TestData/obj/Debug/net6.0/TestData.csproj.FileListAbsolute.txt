@@ -1,0 +1,15 @@
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\bin\Debug\net6.0\TestData.deps.json
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\bin\Debug\net6.0\TestData.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\bin\Debug\net6.0\TestData.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\bin\Debug\net6.0\Interface.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\bin\Debug\net6.0\Interface.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.csproj.AssemblyReference.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.AssemblyInfoInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.AssemblyInfo.cs
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.csproj.CoreCompileInputs.cache
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.csproj.CopyComplete
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\refint\TestData.dll
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\TestData.pdb
+C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\TestData\obj\Debug\net6.0\ref\TestData.dll

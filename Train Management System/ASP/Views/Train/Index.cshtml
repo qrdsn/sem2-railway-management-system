@@ -1,0 +1,81 @@
+﻿@model List<TrainViewModel>
+
+@{
+    ViewData["Title"] = "Trains";
+}
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-labelledby="AddFile" aria-hidden="true" style="text-align: center">
+    <div class="modal-dialog" style="width:30vw;">
+        <div id="overlayContent" class="modal-content d-flex bd-highlight border" style="border:none; padding:15px; border-radius:10px; width:100%; background-color:white; text-align:left">
+        </div>
+    </div>
+</div>
+
+<h1>Trains</h1>
+
+<a href="#" class="btn btn-primary" id="createTrain" data-bs-toggle="modal" data-bs-target="#overlay">
+    Create train
+</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Max Speed</th>
+            <th>First Class Seats</th>
+            <th>Second Class Seats</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null)
+        {
+            @foreach (TrainViewModel train in Model) {
+            <tr>
+                <td>@train.Type</td>
+                <td>@train.MaxSpeed</td>
+                <td>@train.FirstClassSeats</td>
+                <td>@train.SecondClassSeats</td>
+                <td>
+                    <a href="#" onclick="editTrain(@(train.TrainId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="deleteTrain(@(train.TrainId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                </td>
+            </tr>            
+        }
+}
+    </tbody>
+</table>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#createTrain').click( e =>{
+        e.preventDefault();
+
+        var url = '@Url.Action("Create", "Train")';
+        $('#overlayContent').load(url);
+    })
+
+    function deleteTrain(id){
+        var url = '@Html.Raw(Url.Action("Delete", "Train", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+
+    function editTrain(id){
+        var url = '@Html.Raw(Url.Action("Edit", "Train", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+</script>

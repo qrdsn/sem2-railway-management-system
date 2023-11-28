@@ -1,0 +1,51 @@
+﻿<h1>Validate</h1>
+
+<div class="form-group">
+    <label for="code">Code</label>
+    <input type="text" class="form-control" id="code" />
+</div>
+<br>
+
+
+<button type="button" class="btn btn-primary" id="searchCodeButton">Validate</button>
+<br>
+
+<div id="resultPartial">
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="text/javascript">
+    var ticketViewModel;
+    $('#searchCodeButton').click(e => {
+        let data = {
+            code: $('#code').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+
+        $.post(domain + "Ticket/Validate", data, function(returnValue){
+            console.log(returnValue);
+            if (!returnValue.hasOwnProperty('errors')) {
+
+                var url = '@Url.Action("ValidateResult", "Ticket")';
+                $.ajax({
+                    complete: function () {
+                        $('#resultPartial').load(url, {result: returnValue.result}); 
+                    }
+                });
+
+            } else {
+                alert('errrors n stuff');
+                alert(returnValue.errors[0])
+            }
+        }, "json")
+            .done(() => { 
+            })
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

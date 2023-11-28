@@ -1,0 +1,68 @@
+﻿@model UserViewModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Register";
+}
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASP.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/icons/bootstrap-icons.css" />
+</head>
+<body>
+    <div class="p-3">
+        <div class="d-flex align-items-center justify-content-center" style="height:400px">
+            <div class="bd-highlight border" style="padding:15px; border-radius:10px; width:300px;">
+                <form id="registerForm" class="form-group">
+                    <label>@Model.Email</label><br><br />
+                    <label for="passwordInput">Password:</label><br />
+                    <input class="form-control" type="password" id="passwordInput" name="password"><br>
+                    <label for="firstNameInput">First Name:</label>
+                    <input class="form-control" type="text" id="firstNameInput" name="firstName" value="@Model.FirstName"><br>
+                    <label for="lastNameInput">Last Name:</label>
+                    <input class="form-control" type="text" id="lastNameInput" name="lastName" value="@Model.LastName"><br>
+                    <input class="form-control btn btn-primary" type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        $('#registerForm').submit(e => {
+            e.preventDefault();
+
+            let data = {
+                password: $('#passwordInput').val(),
+                email: ('@Model.Email'),
+                firstName: $('#firstNameInput').val(),
+                lastName: $('#lastNameInput').val()
+            }
+
+            let domain = window.location.protocol + "//" + window.location.host + "/";
+
+            $.post(domain + "User/ConfirmRegister", data, function(returnValue){
+                console.log(returnValue);
+                if (returnValue.hasOwnProperty('errors')) {
+                    var message = "";
+                    returnValue.errors.forEach(item => message = message + "\n" + item);
+                    alert(message);
+                } else {
+                    window.location.href = domain + "User/Login"
+                }
+            }, "json")
+                .fail(xhr => { 
+                    alert(xhr.responseMessage) 
+                })
+        })
+    </script>
+</body>

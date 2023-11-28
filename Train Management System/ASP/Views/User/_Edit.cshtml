@@ -1,0 +1,113 @@
+﻿@using Interface.User
+@using System.Security.Claims
+@model UserViewModel
+@{var role = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role).Value;}
+
+<h1>Edit</h1>
+<br />
+
+<form id="editUserForm">
+    <div class="form-group">
+        <label>First name</label>
+        <input name="firstName" id="firstNameInput" class="form-control" type="text" value="@Model.FirstName">
+    </div><br />
+    <div class="form-group">
+        <label>Last name</label>
+        <input name="lastName" id="lastNameInput" class="form-control" type="text" value="@Model.LastName">
+    </div><br />
+    <div class="form-group">
+        <label>Email</label>
+        <input name="email" id="emailInput" class="form-control" type="email" value="@Model.Email">
+    </div><br />
+    <div class="form-group">
+        @if(role == "Administrator")
+        {
+            <div class="form-group">
+                <label>Role</label>
+                <select id="roleInput" class="form-select" name="role">
+                    @foreach (UserRoles userRoles in Enum.GetValues(typeof(UserRoles)))
+                    {
+                        if (userRoles == Model.Role)
+                        {
+                            <option selected value="@Convert.ToInt32(userRoles)">@userRoles</option>
+                        } else
+                        {
+                            <option value="@Convert.ToInt32(userRoles)">@userRoles</option>
+                        }
+                    }
+                </select><br>
+            </div>
+            <div id="employeePositionSelect" class="form-group">
+                <label>Employee position</label>
+                <select id="employeePositionInput" class="form-select" name="employeePosition">
+                    @foreach (EmployeePositions employeePosition in Enum.GetValues(typeof(EmployeePositions)))
+                    {
+                        if (employeePosition == Model.EmployeePosition)
+                        {
+                            <option selected value="@Convert.ToInt32(employeePosition)">@employeePosition</option>
+                        } else
+                        {
+                            <option value="@Convert.ToInt32(employeePosition)">@employeePosition</option>
+                        }
+                    }
+                </select>
+            </div><br />        
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Save User</button>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    $('#editUserForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            firstName: $('#firstNameInput').val(),
+            lastName: $('#lastNameInput').val(),
+            email: $('#emailInput').val(),
+            role: $('#roleInput').val(),
+            employeePosition: $('#employeePositionInput').val(),
+            userId: (@Model.UserId),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "User/ConfirmEdit", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { 
+                if (('@role') === "Administrator"){
+                    window.location.href = domain + "User/Index";
+                } else {
+                    window.location.href = domain + "User/Edit";
+                }
+            } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+
+    $('#roleInput').on('change', function() {
+        if($(this).val() === "1") {
+            $('#employeePositionSelect').show();
+        } else {
+            $('#employeePositionSelect').hide();
+        }
+     })
+
+    $(document).ready(function(){
+        if('@Model.Role' === "Employee") {
+            $('#employeePositionSelect').show();
+        } else {
+            $('#employeePositionSelect').hide();
+        }
+    });
+</script>

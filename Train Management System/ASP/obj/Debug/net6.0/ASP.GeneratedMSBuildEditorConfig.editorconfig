@@ -1,0 +1,192 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ASP
+build_property.RootNamespace = ASP
+build_property.ProjectDir = C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\ASP\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Quinn\School\Semester 2\Individual project\railway-management-system\Train Management System\ASP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxTZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxfRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Journey/_Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5leVxfU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxfRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/_Name.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxfTmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Railway/_Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxfU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Station/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Station/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Station/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Station/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxfRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Station/_Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvblxfU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/Buy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XEJ1eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/Validate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFZhbGlkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/_SearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XF9TZWFyY2hSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Ticket/_ValidateResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XF9WYWxpZGF0ZVJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cX0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/_Name.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cX05hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Train/_Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5cX1NlbGVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/User/_Name.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Quinn/School/Semester 2/Individual project/railway-management-system/Train Management System/ASP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ejlkpthfcb

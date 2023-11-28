@@ -1,0 +1,57 @@
+﻿@using Interface.Train
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Train</h1>
+<br />
+
+<form id="createTrainForm">
+    <div class="form-group">
+        <select id="typeInput" class="form-select" name="type">
+            <option selected disabled hidden>Train Type</option>
+            @foreach (TrainTypes trainType in Enum.GetValues(typeof(TrainTypes)))
+            {
+                <option value="@Convert.ToInt32(trainType)">@trainType</option>
+            }
+        </select>
+    </div><br />
+    <div class="form-group">
+        <input name="maxSpeed" id="maxSpeedInput" class="form-control" type="number" placeholder="Maximum speed km/h">
+    </div><br />
+    <div class="form-group">
+        <input name="firstClassSeats" id="firstClassSeatsInput" class="form-control" type="number" placeholder="First Class Seats Amount">
+    </div><br />
+    <div class="form-group">
+        <input name="secondClassSeats" id="secondClassSeatsInput" class="form-control" type="number" placeholder="Second Class Seats Amount">
+    </div><br />
+    <button type="submit" value="createTrain" class="btn btn-primary">Create Train</button>
+</form>
+
+<script type="text/javascript">
+    $('#createTrainForm').submit(e => {
+        e.preventDefault();
+
+        let data = {
+            type: $('#typeInput').val(),
+            maxSpeed: $('#maxSpeedInput').val(),
+            firstClassSeats: $('#firstClassSeatsInput').val(),
+            secondClassSeats: $('#secondClassSeatsInput').val(),
+        }
+
+        let domain = window.location.protocol + "//" + window.location.host + "/";
+       
+        $.post(domain + "Train/Create", data, function(returnValue){
+            console.log(returnValue);
+            if (returnValue.hasOwnProperty('errors')) {
+                var message = "";
+                returnValue.errors.forEach(item => message = message + "\n" + item);
+                alert(message);
+            }
+        }, "json")
+            .done(() => { window.location.href = domain + "Train/Index" } )
+            .fail(xhr => { 
+                alert(xhr.responseMessage) 
+            })
+    })
+</script>

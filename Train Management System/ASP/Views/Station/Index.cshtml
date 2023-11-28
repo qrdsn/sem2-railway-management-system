@@ -1,0 +1,77 @@
+﻿@model List<StationViewModel>
+
+@{
+    ViewData["Title"] = "Station";
+}
+
+<div class="modal fade" id="overlay" tabindex="-1" aria-labelledby="AddFile" aria-hidden="true" style="text-align: center">
+    <div class="modal-dialog" style="width:30vw;">
+        <div id="overlayContent" class="modal-content d-flex bd-highlight border" style="border:none; padding:15px; border-radius:10px; width:100%; background-color:white; text-align:left">
+        </div>
+    </div>
+</div>
+
+<h1>Station</h1>
+
+<a href="#" class="btn btn-primary" id="createStation" data-bs-toggle="modal" data-bs-target="#overlay">
+    Create station
+</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null)
+        {
+            @foreach (StationViewModel station in Model) {
+            <tr>
+                <td>@station.Name</td>
+                <td>@station.Location</td>
+                <td>
+                    <a href="#" onclick="editStation(@(station.StationId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="deleteStation(@(station.StationId))" data-bs-toggle="modal" data-bs-target="#overlay">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+                </td>
+            </tr>            
+        }
+}
+    </tbody>
+</table>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#createStation').click( e =>{
+        e.preventDefault();
+
+        var url = '@Url.Action("Create", "Station")';
+        $('#overlayContent').load(url);
+    })
+
+    function deleteStation(id){
+        var url = '@Html.Raw(Url.Action("Delete", "Station", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+
+    function editStation(id){
+        var url = '@Html.Raw(Url.Action("Edit", "Station", new { id = "-1" }))';
+        url = url.replace("-1", id);
+        $('#overlayContent').load(url);
+    }
+</script>

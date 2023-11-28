@@ -1,0 +1,24 @@
+﻿@model Tuple<List<StationViewModel>, int>
+
+@if (Model != null)
+{
+    if (Model.Item2 == 0)
+    {
+        foreach(StationViewModel stationViewModel in Model.Item1)
+        {
+            <option value="@stationViewModel.StationId">@stationViewModel.Name</option>
+        }        
+    } 
+    else
+    {
+        foreach(StationViewModel stationViewModel in Model.Item1)
+        {
+            if (stationViewModel.StationId == Model.Item2)
+            {
+                <option selected value="@stationViewModel.StationId">@stationViewModel.Name</option>
+            } else {
+                <option value="@stationViewModel.StationId">@stationViewModel.Name</option>
+            }
+        }  
+    }
+}
